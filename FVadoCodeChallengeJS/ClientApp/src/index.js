@@ -1,19 +1,29 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
-import './index.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './css/bootstrap-3.3.7-dist/css/bootstrap.css';
+import './css/site.css';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import { PhoneListContainer } from './components/phoneListContainer/phoneListContainer';
+import { Layout } from './components/Layout/Layout';
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(
-  <BrowserRouter basename={baseUrl}>
-    <App />
-  </BrowserRouter>,
-  rootElement);
+function renderApp() {
 
-registerServiceWorker();
+    ReactDOM.render(
+        <AppContainer>
+            <Provider store={store}>
+                <Layout children={<PhoneListContainer />} />
+            </Provider>
+        </AppContainer>,
+        rootElement);
+
+}
+
+renderApp();
+
+if (module.hot) {
+    renderApp();
+}

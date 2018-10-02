@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27825.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FVadoCodeChallengeJS", "FVadoCodeChallengeJS\FVadoCodeChallengeJS.csproj", "{FC9303B1-B635-41F9-AE2B-8D2842D76918}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FVadoCodeChallengeJS", "FVadoCodeChallengeJS\FVadoCodeChallengeJS.csproj", "{FC9303B1-B635-41F9-AE2B-8D2842D76918}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{927703CB-F8F0-4825-BFC4-696FF842F8CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FvadoCodeChallengeAPI", "FvadoCodeChallengeAPI\FvadoCodeChallengeAPI.csproj", "{D983AA12-7688-40A3-BD2B-BF05B92EBC59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{FC9303B1-B635-41F9-AE2B-8D2842D76918}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC9303B1-B635-41F9-AE2B-8D2842D76918}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC9303B1-B635-41F9-AE2B-8D2842D76918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{927703CB-F8F0-4825-BFC4-696FF842F8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{927703CB-F8F0-4825-BFC4-696FF842F8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{927703CB-F8F0-4825-BFC4-696FF842F8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{927703CB-F8F0-4825-BFC4-696FF842F8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D983AA12-7688-40A3-BD2B-BF05B92EBC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D983AA12-7688-40A3-BD2B-BF05B92EBC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D983AA12-7688-40A3-BD2B-BF05B92EBC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D983AA12-7688-40A3-BD2B-BF05B92EBC59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

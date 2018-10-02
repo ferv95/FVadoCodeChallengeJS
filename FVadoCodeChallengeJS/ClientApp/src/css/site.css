@@ -1,0 +1,97 @@
+﻿
+.phonedetailcontainer img {
+    height: 200pt;
+    width: auto;
+}
+
+div .listphone {
+    border-left: 3pt solid #c3d0e5;
+    margin: 5pt 5pt 0 5pt;
+    text-align: center;
+}
+
+    div .listphone:hover {
+        background-color: #ddeaff;
+    }
+
+.price {
+    font-size: 200%;
+    text-align: center;
+}
+
+.phonedetails, .phonebrand {
+    font-size: 150%;
+    margin-left: 1pt;
+    margin-right: 1pt;
+}
+
+
+.phonelistdetails {
+    font-size: 150%;
+    text-align: center;
+}
+
+.btnBack {
+    width: 70%;
+    margin: 5pt 0pt 5pt 0pt;
+}
+
+.btndiv {
+    text-align: center;
+}
+
+.phonedescription {
+    text-align: justify;
+    margin-left: 1pt;
+    margin-right: 1pt;
+}
+
+.phonedetails {
+    text-align: left;
+}
+
+.phonepic img {
+    height: 115pt;
+    width: auto;
+    border-radius: 5pt;
+    margin-top: 20pt;
+    margin-left: 10pt;
+    margin-right: 10pt;
+}
+
+.phonepic {
+    text-align: center;
+}
+
+.phonedetailcontainer {
+    border-radius: 0pt 0pt 5pt 5pt;
+    border-left: 2pt solid black;
+    border-bottom: 2pt solid grey;
+    border-right: 2pt solid grey;
+    margin: auto;
+    width: 90%;
+}
+
+.phonelistcontainer {
+    margin: auto;
+    width: 90%;
+}
+
+.spinner {
+    position: absolute;
+    z-index: 4001;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+    .spinner img {
+        height: 100%;
+        width: auto;
+    }
