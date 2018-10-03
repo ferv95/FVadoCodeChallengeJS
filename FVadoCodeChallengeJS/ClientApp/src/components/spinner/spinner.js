@@ -2,20 +2,17 @@
 
 export class Spinner extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
+    render = () => {
+        const { isFetching } = this.props;
 
-    render() {
-        if (this.props.isFetching) {
+        if (isFetching) {
             return (
                 <div className="spinner">
-                    <img src="https://loading.io/spinners/money/index.coin-flowing-loader.svg" />
+                    <img src="https://loading.io/spinners/money/index.coin-flowing-loader.svg" alt="Spinner"/>
                 </div>
             );
         } else {
             return null;
         }
     }
-
 }

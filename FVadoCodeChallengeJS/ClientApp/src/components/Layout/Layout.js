@@ -2,11 +2,12 @@
 import { SpinnerContainer } from "../spinner/spinnerContainer";
 
 export class Layout extends React.Component{
-    render() {
+    render = () => {
+        const { children } = this.props;
         return (
             <div className="container">
                 <SpinnerContainer />
-                {this.props.children}
+                {children}
             </div>
         )
     }

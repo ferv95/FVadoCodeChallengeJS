@@ -5,31 +5,32 @@ import * as shallowequal from 'shallowequal';
 
 export class PhoneList extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-    componentWillMount() {
-        this.props.getPhones();
+    componentWillMount = () => {
+        const { getPhones } = this.props;
+        getPhones();
         this.setState({
             selectedPhone: '',
             currentScreen: 'list',
         })
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate = (nextProps, nextState) => {
+        const { props } = this.props;
+        const { state } = this.state;
 
-        return !shallowequal(this.props, nextProps) || !shallowequal(this.state, nextState);
+        return !shallowequal(props, nextProps) || !shallowequal(state, nextState);
 
     }
 
     renderComponent = () => {
-        if (this.state.currentScreen === 'list') {
+        const { currentScreen, selectedPhone } = this.state;
+        const { phones } = this.props;
+        if (currentScreen === 'list') {
             return (
                 <div className="container phonelistcontainer">
                     <div className="row">
                         {
-                            this.props.phones.map((phone) => {
+                            phones.map((phone) => {
                                 return <PhoneListItem phone={phone} phoneSelectedHandler={this.phoneSelected} key={phone.ID} />
                             })
                         }
@@ -38,7 +39,7 @@ export class PhoneList extends React.Component {
             );
         } else {
             return (
-                <PhoneDetail phone={this.getPhoneByID(this.state.selectedPhone)} backHandler={this.backButtonHandler} />
+                <PhoneDetail phone={this.getPhoneByID(selectedPhone)} backHandler={this.backButtonHandler} />
             );
         }
     }
@@ -51,7 +52,8 @@ export class PhoneList extends React.Component {
     }
 
     getPhoneByID = (phoneID) => {
-        return this.props.phones.filter(x => x.ID === phoneID)[0];
+        const { phones } = this.props;
+        return phones.filter(x => x.ID === phoneID)[0];
     }
 
     backButtonHandler = () => {
@@ -60,12 +62,12 @@ export class PhoneList extends React.Component {
         });
     }
 
-    render() {
-
-        if (this.props.phones.length > 0) {
-            return this.renderComponent()
+    render = () => {
+        const { phones } = this.props;
+        if (phones.length > 0) {
+            return this.renderComponent();
         } else {
-            return null
+            return null;
         }
     }
 

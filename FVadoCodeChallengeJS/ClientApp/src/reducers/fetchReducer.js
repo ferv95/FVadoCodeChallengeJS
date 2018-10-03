@@ -6,8 +6,9 @@ export const fetchReducer = (state = true, action) => {
             return handleFetchPhonesCompleted(state, action.payload);
         case actionTypes.FETCH_PHONES_START:
             return handleFetchPhonesStart(state, action.payload);
+        default:
+            return state;
     }
-    return state;
 };
 
 const handleFetchPhonesCompleted = (state, payload) => {
